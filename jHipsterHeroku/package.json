@@ -12,15 +12,15 @@
     "@fortawesome/free-solid-svg-icons": "5.13.0",
     "@fortawesome/react-fontawesome": "0.1.9",
     "availity-reactstrap-validation": "2.6.1",
-    "axios": "0.19.2",
+    "axios": "0.21.3",
     "bootstrap": "4.4.1",
     "loaders.css": "0.1.2",
-    "lodash": "4.17.15",
-    "moment": "2.24.0",
+    "lodash": "4.17.21",
+    "moment": "2.29.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hot-loader": "4.12.20",
-    "react-jhipster": "0.11.0",
+    "react-jhipster": "0.14.0",
     "react-loadable": "5.5.0",
     "react-redux": "7.2.0",
     "react-redux-loading-bar": "4.6.0",
@@ -35,7 +35,8 @@
     "redux-promise-middleware": "6.1.2",
     "redux-thunk": "2.3.0",
     "tslib": "1.11.1",
-    "uuid": "7.0.3"
+    "uuid": "7.0.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "1.0.13-4.3.1",
@@ -135,10 +136,13 @@
     "webpack:prod": "npm run cleanup && npm run webpack:prod:main",
     "webpack:test": "npm run test",
     "webpack-dev-server": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js"
+    "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "jestSonar": {
     "reportPath": "target/test-results/jest",
     "reportFile": "TESTS-results-sonar.xml"
-  }
+  },
+  "snyk": true
 }
